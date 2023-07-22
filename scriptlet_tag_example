@@ -1,0 +1,6 @@
+<% if (kindOfDay === "Saturday" || kindOfDay === "Sunday"){ %>
+        <h1 style="color: purple;">It's a <%= kindOfDay %></h1>
+    <% } else { %>
+        <h1 style="color: blue;">It's a <%= kindOfDay %></h1>
+    <% } %> 
+    <!-- scriptlet tag only goes around the javascript bits -->
