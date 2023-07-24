@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const _ = require("lodash")
 const date = require(__dirname + "/date.js");
 
-const port = 3000;
+const port = process.env.PORT;
 const app = express();
 
 app.use(bodyParser.urlencoded({extended : true}));
@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.locals._ = _;
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://pratham16a:Makunga98150@cluster0.ogn0vye.mongodb.net/todolistDB", {useNewUrlParser:true});
 connectionPromise = mongoose.connection.asPromise();
 connectionPromise.then(()=>{
     console.log("connected successfully to DB");
